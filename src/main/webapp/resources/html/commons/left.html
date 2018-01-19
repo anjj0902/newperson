@@ -1,0 +1,72 @@
+<div id="left-fixed">
+	<div class="menu">
+		<div class="menu-drop">
+			<div class="menu-drop-logo">
+				<a href="#!/main"><img src="resources/img/sole.png" style="width: 100%;height: 34%; padding-bottom: 50%;"></a>
+			</div>
+			<div id="navi" style="width: 120px;">
+				<ul>
+					<li class="active"><a href="#">SoleMio</a>
+						<ul>
+							<li><a href="#!/introduce">Introduce</a></li>
+							<li><a href="#!/direction">Direction</a></li>
+							<li><a href="#!/interior">Interior</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Menu</a>
+						<ul>
+							<li><a href="#!/spagetti">Spaghetti</a></li>
+							<li><a href="#!/risotto">risotto</a></li>
+							<li><a href="#!/pizza">pizza</a></li>
+							<li><a href="#!/stake">stake</a></li>
+							<li><a href="#!/salad">salad</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Customer</a>
+						<ul>
+							<li><a href="#!/notice">Notice</a></li>
+							<li><a href="#!/cusvoice">Cus voice</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">My Page</a>
+						<ul>
+							<li><a href="#!/member">Member</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-login">
+			<div class="container" style="margin-top: 0%;width: 100%; height: 160px; padding: 27px 0 32px 22px;background: #311e0a;border-top: 1px solid #5a4b3b;border-bottom: 1px solid #5a4b3b;margin-bottom: 15px;">
+				<div data-ng-if="memberFlag">
+					<a href="#!/memberinfo"  id="memberinfo-view" style="text-align: center;margin-left: 2px; font-family: 'Nanum Brush Script', serif;font-weight: bold; font-size: 32px">회원정보 보기</a>
+				</div>
+				<div data-ng-if="!loginFlag">
+					<a href="#!/login"><button type="button" class="btn btn-default btn-sm mloginbtn" id="loginbutton" style="float: left; font-size: 2rem; font-family: 'Nanum Brush Script', serif; font-weight: bold;">Login</button></a>
+					<!--join 버튼-->
+					<a href="#!/join"><button type="button" class="btn btn-default btn-sm mjoinbtn" id="joinbutton" style=" font-size: 2rem;font-family: 'Nanum Brush Script', serif;font-weight: bold; " >Join</button></a>                  
+				</div>
+				<div id="btnIdbox" style="width: 100%;height: 20px;" data-ng-if="loginFlag">
+					<p style="margin : 0%; color: white; margin : 0; font-size: 17.ㅊㅊpx;">{{userId}} 님 입장.</p>
+					<div class="logout">
+						<button style="width: 69%;height: 39px;"type='button' class='logout' id='logoutbtn' style='color : red;' data-ng-click="logout()">로그아웃</button>
+					</div>
+				</div>
+			</div>
+			<div class="container1" style="margin-top: 0%;width: 100%; height: 160px; padding: 27px 0 32px 22px;background: #311e0a;border-top: 1px solid #5a4b3b;border-bottom: 1px solid #5a4b3b;margin-bottom: 110px;">
+				<a><p>@연신내<br>솔레미오</p></a>
+			</div>
+		</div>
+	</div>
+	<!-- left 이미지-->
+	<div class="preview" data-ng-if="!mainFlag"></div>
+	<div class="mpreview" data-ng-if="mainFlag">
+		<div class="mpreview-logo">로고</div>
+        <div class="mpreview-interior">인테리어</div>
+        <div class="mpreview-customer">고객</div>
+        <div class="mpreview-notice">공지</div>
+        <div class="mpreview-bonsa">본사</div>
+    </div>
+</div>

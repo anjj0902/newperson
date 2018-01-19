@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+body{
+    margin: 0;
+   
+}
+/*큰박스*/
+.bigbox{
+    /*background-color: aqua;*/
+    min-width: 1100px;
+    height: 100vh;
+}
+
+
+/*오른쪽 그림들어가는 부분*/
+.fixright{
+    background : url(../img/bg.png);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /*margin-left: 84.5%;*/
+}
+/*메뉴 드롭다운 부분*/
+
+.fixright-head{
+	
+	width: 100%;
+	height: 174px;
+}
+.fixright-head-first{
+	width: 100%;
+	height: 20%;
+}
+.fixright-head-second{
+	width: 100%;
+	height: 80%;
+}
+
+.fixright-middle{
+	
+	width: 100%;
+	height: 448px;
+}
+.fixright-head{
+	
+}
+
+.wrap_map{
+    height: 500px;
+}
+.container1 p{
+    font-family: 'Nanum Brush Script', serif;
+    font-size: 40px;
+    font-weight: bold;
+}

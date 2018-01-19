@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="login">
+	<!--아이디 비밀번호비교 (로그인시 사용) -->
+   <select id="selectLogin" resultType="hashmap" parameterType="hashmap">
+      select * from test where id=#{id} and pw=#{pw}
+   </select>
+   
+   <!--아이디 중복 검사 (회원가입에 id중복체크시 사용) -->
+   <select id="overlapId" resultType="hashmap">
+      select id from test where id=#{id}
+   </select>
+   
+   <!--회원가입 (회원가입시 사용) -->
+   <insert id="insertJoin" parameterType="hashmap">
+      insert into test(id, pw, email) values (#{id}, #{pw}, #{email} )
+   </insert>
+    
+	<select id="memberlist" resultType="hashmap">
+		select id,email,pw,d_U from test;
+	</select>
+   
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="menu">
+
+   
+   
+   <insert id="InsertMenu" parameterType="hashmap">
+      insert into menu(name,menu_name,image_name1, image_name2, image_name3, menu_type) values(#{name},#{menu_name},#{image_name1},#{image_name2}, #{image_name3}, #{menu_type})
+   </insert>
+
+   <select id="SelectMenu" parameterType="string" resultType="hashmap">
+      select * from menu 
+      where menu_type = #{menu_type}
+      order by name
+   </select>
+   <select id="Selectkey" parameterType="hashmap" resultType="hashmap">
+    select * from menu where key1 = #{key}
+
+   </select>
+
+
+   
+ 
+
+
+   
+</mapper>
+
+

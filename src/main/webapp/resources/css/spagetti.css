@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+
+body{
+    margin: 0;
+   
+}
+/*큰박스*/
+.bigbox{
+    /*background-color: aqua;*/
+    min-width: 1100px;
+    height: 100vh;
+}
+
+/*배너부분*/
+.banner{
+        background: rgba(227,224,197,16.9);
+    
+    /*background-color: firebrick;*/
+    /*width: 62.38%;*/
+    /*height: 123%;*/
+    /*float: left;
+    margin-left: 22.2%;*/
+    left: 300px;
+    right: 250px;
+    position: absolute;
+    
+}
+
+/*내용의 머리*/
+.contents-head{
+    
+    width: 100%;
+    /*height: 20%;*/
+}
+/*내용의 중간*/
+.contents-middle{
+    
+    width: 100%;
+    /*height: 70%;*/
+    margin-top: -4%;
+}
+
+
+/*머리의 빈공간*/
+.head-empty{
+    
+    width: 100%;
+    /*height: 50%;*/
+    height: 70px;
+}
+/*머리의 글 들어가는곳*/
+.head-letter{
+     
+    width: 100%;
+    /*height: 50%;*/
+    height: 70px;
+}
+.head-letter p{
+      font-family: 'Nanum Brush Script', serif;
+    font-size: 45px;
+       
+}
+.head-letter span{
+      font-family: 'Nanum Brush Script', serif;
+    font-size: 50px;
+}
+
+.wrap_map{
+    height: 500px;
+}
+.container1 p{
+    font-family: 'Nanum Brush Script', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+/*메뉴가 들어가는곳*/
+#cream-menu{
+    width: 100%;
+/*     height: 100%; */
+clear: both;
+
+   
+    
+}
+.menubase{
+	background: rgba(227,224,197,16.9);
+	width: calc(100%/3);
+	height: 30%;
+	float: left;
+}
+.menutop{
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	mar
+}
+.menuimg{
+	width: 100%;
+	height: 80%;
+}
+.menuimgl{
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+.menuimgm{
+	width: 80%;
+	height: 100%;
+	float: left;
+}
+.menuimgr{
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+.bannerControl{
+   position:absolute;
+   
+   top: 50%;
+   left: 33%;
+   width: 546px;
+}
+.w3-container{
+   width: 100%;
+   height: 660px;
+} 
+.w3-modal-content4{
+   width: 700px;
+   height:350px;
+   position: fixed;
+   margin-left: 33%;
+   background-color: black;
+}
+.disNone{
+    display: none;
+    height: 500px;
+}
+.disblock {
+	display: block!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

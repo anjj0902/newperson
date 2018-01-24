@@ -17,5 +17,18 @@ public class MemberService implements MemberServiceInterface {
 		map.put("list",mbdi.memberinfo());
 		return map;
 	}
+	@Override
+	public HashMap<String, Object> memberupdate(HashMap<String, Object> param) {
+		System.out.println("gggggggggggggggggggggggggggggggggggggg:service"+ param);
+		HashMap<String,Object>map = new HashMap<>();
+		map.put("list",mbdi.memberupdate(param));
+		return map;
+	}
+	@Override
+	public HashMap<String, Object> cusmemberboard(HashMap<String, Object> param) {
+		HashMap<String,Object> map = new HashMap<>();
+		map.put("list",mbdi.cusmemberboard(param));
+		return map;
+	}
 
 }

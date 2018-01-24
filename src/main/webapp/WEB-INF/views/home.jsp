@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html data-ng-app="AJJ">
 <head>
 	<title>Home</title>
@@ -40,6 +41,7 @@
 	<script src="resources/js/salad.js"></script>
 	<script src="resources/js/member.js"></script>
 	<script src="resources/js/memberinfo.js"></script>
+	
 	
 	<link rel="stylesheet" href="resources/css/left.css">
 	<link rel="stylesheet" href="resources/css/mleft.css">

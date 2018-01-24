@@ -24,8 +24,10 @@ public class MenuService implements MenuServiceInterface {
 	      
 	      boolean isMultipart = ServletFileUpload.isMultipartContent(req);                   // multipart로 전송되었는가를 체크
 	       if (isMultipart) {                                                                                            // multipart로 전송 되었을 경우
-	        File temporaryDir = new File("c:\\tmp\\");                                                 //업로드 된 파일의 임시 저장 폴더를 설정
-	        String realDir = req.getRealPath("/resources/upload/");                //톰켓의 전체 경로를 가져오고 upload라는 폴더를 만들고 거기다
+//	        File temporaryDir = new File("C:/Users/GD/git/newperson/src/main/webapp/resources/upload");                                                 //업로드 된 파일의 임시 저장 폴더를 설정
+	        String realDir = ("C:/Users/GD/git/newperson/src/main/webapp/resources/upload");   
+	        System.out.println("real~~~~~~~~~~~~~"+realDir);
+	        //톰켓의 전체 경로를 가져오고 upload라는 폴더를 만들고 거기다
 	        DiskFileItemFactory factory = new DiskFileItemFactory();                                   
 	        
 	        ServletFileUpload upload = new ServletFileUpload(factory);                               

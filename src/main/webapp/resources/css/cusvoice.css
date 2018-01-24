@@ -137,20 +137,20 @@ body{
     text-align: center;
     border-radius: 34px;
 }
-.notice-middle-no1{
+/* .notice-middle-no1{ */
     
-    width: 20%;
-    height: 60px;
-    float: left;
-    font-family: 'Nanum Brush Script', serif;
-    font-size: 34px;
-    border-style: outset;
-    text-align: center;
-    border-radius: 34px;
-}
+/*     width: 20%; */
+/*     height: 60px; */
+/*     float: left; */
+/*     font-family: 'Nanum Brush Script', serif; */
+/*     font-size: 34px; */
+/*     border-style: outset; */
+/*     text-align: center; */
+/*     border-radius: 34px; */
+/* } */
 .notice-middle-title{
      
-    width: 60%;
+    width: 50%;
     height: 60px;
     float: left;
     font-family: 'Nanum Brush Script', serif;
@@ -159,17 +159,17 @@ body{
     text-align: center;
     border-radius: 34px;
 }
-.notice-middle-title1{
+/* .notice-middle-title1{ */
      
-    width: 60%;
-    height: 60px;
-    float: left;
-    font-family: 'Nanum Brush Script', serif;
-    font-size: 34px;
-    border-style: outset;
-    text-align: center;
-    border-radius: 34px;
-}
+/*     width: 40%; */
+/*     height: 60px; */
+/*     float: left; */
+/*     font-family: 'Nanum Brush Script', serif; */
+/*     font-size: 34px; */
+/*     border-style: outset; */
+/*     text-align: center; */
+/*     border-radius: 34px; */
+/* } */
 .notice-middle-id{
      
     width: 20%;
@@ -181,17 +181,25 @@ body{
     text-align: center;
     border-radius: 34px;
 }
-.notice-middle-id1{
-     
-    width: 20%;
-    height: 60px;
-    float: left;
-    font-size: 34px;
-    font-family: 'Nanum Brush Script', serif;
-    border-style: outset;
-    text-align: center;
-    border-radius: 34px;
+.cusvoice-delete-btn{
+	width: 10%;
+	height: 60px;
+	float: left;
+	 border-style: outset;
+	 border-radius: 34px;
+	 
 }
+/* .notice-middle-id1{ */
+     
+/*     width: 20%; */
+/*     height: 60px; */
+/*     float: left; */
+/*     font-size: 34px; */
+/*     font-family: 'Nanum Brush Script', serif; */
+/*     border-style: outset; */
+/*     text-align: center; */
+/*     border-radius: 34px; */
+/* } */
    body::-webkit-scrollbar { 
             display: none; 
         }

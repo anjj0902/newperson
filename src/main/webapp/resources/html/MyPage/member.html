@@ -31,20 +31,20 @@
                         </div>
                         <div class="mypage-contents" style="margin-top: 11%;">
                             <div class="mypage-contents-list">
-                                  <div class="notice-middle listbigbox">
-                                     <div class="notice-middle-no">no</div>
-                                     <div class="notice-middle-title">title</div>
-                                     <div class="notice-middle-id">id</div>
+                                  <div class="notice-middle listbigbox" data-ng-repeat="row in data">
+                                     <div style="background: rgba(227,224,197,16.9);" class="notice-middle-no">{{row.no}}</div>
+                                     <div class="notice-middle-title">{{row.title}}</div>
+                                     <div class="notice-middle-id">{{row.id}}</div>
                                   </div>
-								  <div class="listin"></div>
-                                  <div class="notice-middle listbigbox1">
-                                     <div class="notice-middle-no">1</div>
-                                     <div class="notice-middle-title">안녕하세요</div>
-                                     <div class="notice-middle-id">admin</div>
-                                 </div>
+<!-- 								  <div class="listin"></div> -->
+<!--                                   <div class="notice-middle listbigbox1"> -->
+<!--                                      <div class="notice-middle-no">1</div> -->
+<!--                                      <div class="notice-middle-title">안녕하세요</div> -->
+<!--                                      <div class="notice-middle-id">admin</div> -->
+<!--                                  </div> -->
                             </div>
-                            <div class="mypage-contents-pageing">페이징</div>
-                            
+<!--                             <div class="mypage-contents-pageing">페이징</div> -->
+<!--                             <button type="membergg">버튼</button> -->
                         </div>
             
                     </div>

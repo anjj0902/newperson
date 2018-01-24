@@ -5,6 +5,9 @@ app.controller("noticedetail", function($rootScope, $scope, $routeParams, $http)
 	$scope.no = $routeParams.param;
 	var no = $scope.no;
 	console.log("newsNo :",no);
+	$scope.noticeupdate = function(){
+		location.href="#!/noticeregister/"+$scope.no;
+	}
 	$scope.cusvoicedetail = function(){
 		  
 		$.ajax({
@@ -17,6 +20,7 @@ app.controller("noticedetail", function($rootScope, $scope, $routeParams, $http)
           	listHtml();
            	console.log(dt.id);
           });
+		
           function listHtml(){
           	var contents = dt.contents
           	$(".detail-content1").html(contents);
@@ -29,13 +33,14 @@ app.controller("noticedetail", function($rootScope, $scope, $routeParams, $http)
           	
           
           }
-          $(".button1").off().on("click",function(){
-          	location.href="#!/noticeregister/"+$scope.no;
-          });
+//          $("#noticeup").off().on("click",function(){
+//        	  console.log("ddd");
+//            	location.href="#!/noticeregister/"+$scope.no;
+//            });
           $(".button2").click(function(){
-//          	location.href="#!/notice";
+          	location.href="#!/notice";
 //        	  alert("gg");
-        	  window.history.back();
+//        	  window.history.back();
           });
 		
 	}

@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.project.ajj.service.CusDetailServiceInterface;
 import com.project.ajj.service.cusmodifyServiceInterface;
+import com.project.ajj.service.cusvoicedeServiceInterface;
 import com.project.ajj.service.cusvoicelistServiceInterface;
 import com.project.ajj.util.HttpUtil;
 
@@ -33,6 +34,8 @@ public class CusvoiceController {
 	
 	@Autowired
 	cusmodifyServiceInterface cmsi;
+	@Autowired
+	cusvoicedeServiceInterface cvsi;
 	@RequestMapping(value = "cusnewsData", method = RequestMethod.POST)
 	public ModelAndView cusnewsData(HttpServletRequest req, ModelAndView mav){
 //		System.out.println("---------------------- : " +req.getParameter("start"));
@@ -60,26 +63,19 @@ public class CusvoiceController {
 	   public ModelAndView cusvoiceDetail(HttpServletRequest req, HttpSession session, HttpServletResponse resp){
 			HashMap<String, HashMap<String, Object>> user = (HashMap<String, HashMap<String, Object>>) session.getAttribute("user");
 		 HashMap<String, Object> param = new HashMap<String, Object>();
+		 
 		   param.put("no", req.getParameter("no"));
-//		   param.put("id",user.get("id"));
-		   System.out.println("controller~~~~~~~~~~~~~~~~~~~~~~~~~~upda:"+req.getParameter("no"));
+		   param.put("id",user.get("id"));
+		   System.out.println("controller~~~~~~~~~~~~~~~~~~~~~~~~~~upda:"+param);
 		  
 			HashMap<String, Object> map = new HashMap<String, Object>();
+			
 	         map = cdsi.Detail(param);
-	         System.out.println("cusvoice:service :"+ map);
+	         map.put("id",user.get("id"));
+	         System.out.println("cusvoice:service11 :"+ map);
 	         HashMap<String, Object> data = new HashMap<String, Object>();
 	         data = (HashMap<String, Object>)map.get("data");
 	         System.out.println("cusvoice:service :"+ data.get("id"));
-//	         if(user == null){
-//	        	 if(data.get("id")==user.get("id")){
-//		        	 data.put("cus",0);
-//		         }else{
-//		        	 data.put("cus",1);
-//		         }
-//	         }else if(user != null){
-//	        	 break
-//	         }
-	        
 	         System.out.println("controller 데이터"+data);
 	        
 	      return HttpUtil.makeHashToJsonModelAndView(map);
@@ -99,4 +95,32 @@ public class CusvoiceController {
 			mav.setViewName("json");
 		 return mav;
 	   }
+	 @RequestMapping("/cusvoicede")
+	 public ModelAndView cusvoicede(HttpServletRequest req,ModelAndView mav){
+		 System.out.println("req~~~~~~"+ req.getParameter("chid"));
+		 HashMap<String,Object> param = new HashMap<>();	
+		
+		 param.put("chid", req.getParameter("chid"));	 
+		 JSONObject jsonObject = new JSONObject();
+	        jsonObject = JSONObject.fromObject(JSONSerializer.toJSON(cvsi.cusvoicede(param)));
+	        mav.addObject("message", jsonObject.toString());      
+	        mav.setViewName("json");
+	        
+		 
+		 return mav;
+	 }
+	 @RequestMapping("/noticede")
+	 public ModelAndView noticede(HttpServletRequest req,ModelAndView mav){
+		 System.out.println("req~~~~~~"+ req.getParameter("noid"));
+		 HashMap<String,Object> param = new HashMap<>();	
+		
+		 param.put("noid", req.getParameter("noid"));	 
+		 JSONObject jsonObject = new JSONObject();
+	        jsonObject = JSONObject.fromObject(JSONSerializer.toJSON(cvsi.noticede(param)));
+	        mav.addObject("message", jsonObject.toString());      
+	        mav.setViewName("json");
+	        
+		 
+		 return mav;
+	 }
 }

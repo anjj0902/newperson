@@ -6,4 +6,15 @@
 	<select id="test" resultType="hashmap">
 		select '테스트' as data
 	</select>
+	<select id="prenotice" resultType="hashmap">
+		select no,title from board where del_yn='N' order by no desc limit 5;
+	</select>
+	
+	<select id="precusvoice" resultType="hashmap">
+		select no,title from cusvoice where del_yn='N' order by no desc limit 5;
+	</select>
+	
+	<select id="cusmemberboard" resultType="hashmap" parameterType="hashmap">
+		select * from cusvoice where del_yn = 'N'AND id = #{id};
+	</select>
 </mapper>

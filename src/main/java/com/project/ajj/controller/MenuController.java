@@ -46,7 +46,7 @@ public class MenuController {
 		  String menu_type = req.getParameter("menu_type");
 	      HashMap<String,Object> param = new HashMap<String, Object>();
 	      param.put("name",req.getParameter("name"));
-	      System.out.println("getmenu controller:"+param);
+	      System.out.println("~~~~~~~~~~~~~getmenu controller:"+param);
 	      System.out.println("getmenu controller1 :"+menu_type);
 	      List<HashMap<String,Object>> list = dtsi.getMenu(menu_type);
 	      

@@ -8,6 +8,9 @@ app.controller("join", function($rootScope, $scope, $routeParams, $http){
     	var id;
     	var pw;
     	var email;
+    	$("#email").attr("pattern", "[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*");
+    	
+    	var regex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
     	$("#joinbutton").off();
         $("#joinbutton").on("click",function(){
         	
@@ -40,6 +43,8 @@ app.controller("join", function($rootScope, $scope, $routeParams, $http){
         	}else if(finId != idText){
         		alert("id를 다시 확인하세요.");
         		$("#id").val(idText);
+        	}else if(regex.test(email) == false){
+        		alert("잘못된 이메일 형식입니다.")
         	}else if(pw.length > 15){
         		alert("비밀번호를 15자 이하로 입력해주세요");
         	}

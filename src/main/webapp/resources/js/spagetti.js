@@ -1,3 +1,4 @@
+
 var app = angular.module("Spagetti", []);
 app.controller("spagetti", function($rootScope, $scope, $routeParams, $http){
 	
@@ -5,6 +6,7 @@ app.controller("spagetti", function($rootScope, $scope, $routeParams, $http){
 	$scope.menutype=1
 	var menutype = $scope.menutype;
 	$scope.menuregister = function(){
+
 		$("#registerbtn").off().on("click",function(){
 //			alert="ggg";
 			 location.href="#!/menuregister/"+menutype;
@@ -17,10 +19,10 @@ app.controller("spagetti", function($rootScope, $scope, $routeParams, $http){
 		}).done(function(d){
 			var result = JSON.parse(d)
 			data = result;
-			console.log("jsp data:"+ data);
+			console.log("jsp data~~:"+ result);
 //			console.log("jsp gg: "+data[12].name);
 			for(var i=0; i< data.length; i++){
-				console.log("ggg",data[i].name);
+				console.log("ggg123:",data[0].menu_name);
 				var id = "id" +i;
 				var tag = 
 					'<div class="menubase" style="background: rgba(227,224,197,16.9);">'+

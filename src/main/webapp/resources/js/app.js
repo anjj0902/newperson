@@ -75,6 +75,7 @@ app.config(function($routeProvider){
 //"/cusvoicedetail/:param"
 //앵귤라에서 사용할 전역 변수 선언 하는 곳?
 app.run(function($rootScope, $http, loginService){
+	
 	$rootScope.commonLeft = "resources/html/commons/left.html";
 	$rootScope.commonRight = "resources/html/commons/right.html";
 	$rootScope.commonmLeft = "resources/html/commons/mleft.html";
@@ -97,13 +98,20 @@ app.run(function($rootScope, $http, loginService){
 		
 		loginService.async().then(function(){
 			var data = loginService.data();
+			console.log(data.data.id);
+			$rootScope.nodetail = function(){
+				var nonono = data.data.id;
+			}
+//			if(data.data.id == )
+			$rootScope.nodeteilid = data.data.id;
 			
+//			console.log("root:",$rootScope.nodeteilid);
 			
 			if(data.data.state == 1){
 				$rootScope.loginFlag = true;
 				$rootScope.userId = data.data.id;
 				if(data.data.auth == 1){
-					$rootScope.memberFlag= true;
+					$rootScope.memberFlag = true;
 				} else if(data.data.auth == 2){
 					$rootScope.memberFlag= false;
 				}
@@ -111,19 +119,6 @@ app.run(function($rootScope, $http, loginService){
 				
 			}
 			
-			if(data.data.state==1){
-				$("#cusvoice-write").show();
-			}else{
-				$("#cusvoice-write").hide();
-			}
-			
-			if(data.data.auth == 1){
-				$("#registerbtn").show();
-				$("#notice-write").show();
-			}else{
-				$("#registerbtn").hide();
-				$("#notice-write").hide();
-			}
 		});
 	}
 	
@@ -138,6 +133,8 @@ app.run(function($rootScope, $http, loginService){
 //			location.href = "/";
 //		});
 	}
+	
+	
 });
 
 //앵귤라에서 서비스 만들기
@@ -150,6 +147,7 @@ app.factory("loginService", function($http, $q){
 		         .then(function(result){
 		            data = result;
 		            
+		            console.log(data);
 		            
 		            deffered.resolve();
 		         });

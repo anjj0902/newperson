@@ -1,3 +1,4 @@
+
 <div id="left-fixed">
 	<div class="menu">
 		<div class="menu-drop">
@@ -56,17 +57,50 @@
 				</div>
 			</div>
 			<div class="container1" style="margin-top: 0%;width: 100%; height: 160px; padding: 27px 0 32px 22px;background: #311e0a;border-top: 1px solid #5a4b3b;border-bottom: 1px solid #5a4b3b;margin-bottom: 110px;">
-				<a><p>@연신내<br>솔레미오</p></a>
+				<a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%97%B0%EC%8B%A0%EB%82%B4+%EC%86%94%EB%A0%88%EB%AF%B8%EC%98%A4&oquery=%40%EC%97%B0%EC%8B%A0%EB%82%B4+%EC%86%94%EB%A0%88%EB%AF%B8%EC%98%A4&tqi=TEkZKwpVuEwssc%2FEk%2FZssssssNs-292219" target="_blank"><p>@연신내<br>솔레미오</p></a>
 			</div>
 		</div>
 	</div>
 	<!-- left 이미지-->
 	<div class="preview" data-ng-if="!mainFlag"></div>
 	<div class="mpreview" data-ng-if="mainFlag">
-		<div class="mpreview-logo">로고</div>
-        <div class="mpreview-interior">인테리어</div>
-        <div class="mpreview-customer">고객</div>
-        <div class="mpreview-notice">공지</div>
-        <div class="mpreview-bonsa">본사</div>
+<!-- 		<div class="mpreview-logo" style="height: 10%;"> -->
+<!-- 			 <div class="mpreview-interior" style="width: 50%; margin-left: 9%; margin-top: 24%;font-size: 47px; font-family: 'Nanum Brush Script', serif; "> -->
+<!--         		<a href="#!/direction" target="_blank"><p>솔레미오 <br>오시는길</p></a> -->
+<!--     	     </div> -->
+			
+<!-- 		</div> -->
+<!--         <div class="mpreview-interior"> -->
+<!--          <div class="mpreview-interior" style="width: 50%; margin-left: 9%; margin-top: 24%;font-size: 47px; font-family: 'Nanum Brush Script', serif; "> -->
+<!--         	<a href="#!/interior" target="_blank"><p>솔레미오 <br>인테리어</p></a> -->
+<!--         </div> -->
+<!--         </div> -->
+        <div style="border-top: 2px solid black; height: 37%;" class="mpreview-customer" data-ng-click="cusvoicelink()">
+        	<p style="margin-left: 3%;font-size: 15px;">고객의소리 미리보기</p>
+        	<div class="precusvoice1" data-ng-repeat="row in data1">
+        		<div style="border-radius: 10px;border-style: double;font-size:20px;width: 30px;height: 45px; float: left;" class="precus-no">{{row.no}}</div>
+        		<div style="overflow: hidden; 
+				  text-overflow: ellipsis;
+				  white-space: nowrap;border-radius: 10px;border-style: double;width: 115px;height: 45px;font-size : 20px;float: left;" class="precus-title">{{row.title}}</div>
+        	</div>
+        	
+        
+        </div>
+        <div style="border-top: 2px solid black;margin-top: 8%; height: 37%;" class="mpreview-notice" data-ng-click="noticelink()">
+        	<p style="margin-left: 6%; font-size: 15px;">공지사항 미리보기</p>
+        	
+        	<div class="prenotice1" data-ng-repeat="row in data">
+        		<div style="border-radius: 10px;border-style: double;width: 30px;text-overflow: ellipsis; font-size:20px; height: 45px; float: left;" class="prenotice-no">{{row.no}}</div>
+        		<div style=
+        		"border-radius: 10px;border-style: double;width: 115px; height: 45px; float: left;overflow: hidden; 
+				  text-overflow: ellipsis;font-size:20px;
+				  white-space: nowrap;" class="prenotice-title">{{row.title}}
+			    </div>
+        	</div>
+        
+        </div>
+        <div class="mpreview-bonsa" style="width: 65%; margin-left: 0%;border-top: 2px solid black; margin-top: 10%;font-size: 33px; font-family: 'Nanum Brush Script', serif; ">
+        	<a href="http://www.solemio.or.kr/" target="_blank"><p style="margin-left: 12%;margin-top: 40%;">솔레미오본사 <br>바로가기</p></a>
+        </div>
     </div>
 </div>

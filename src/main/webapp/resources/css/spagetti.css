@@ -97,7 +97,8 @@ clear: both;
 	width: 100%;
 	height: 20%;
 	text-align: center;
-	mar
+	font-family: 'Nanum Brush Script', serif;
+	font-size: 42px;
 }
 .menuimg{
 	width: 100%;

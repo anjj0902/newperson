@@ -8,7 +8,8 @@
    
    <!--뉴스 리스트 (뉴스 리스트 가져올때 사용) -->
    <select id="selectList" resultType="hashmap" parameterType="hashmap">
-      select * from cusvoice ORDER BY no DESC limit #{start}, #{viewRow};
+      select * from cusvoice where del_yn='N' ORDER BY no DESC 
+<!--       limit #{start}, #{viewRow}; -->
    </select>
    
    <!-- 게시글 개수 구하기 -->
@@ -32,6 +33,11 @@
    <update id="updateNews" parameterType="hashmap">
       update cusvoice set title=#{title}, contents=#{contents} where no = #{no};
    </update>
+   
+   <update id="cusvoicede" parameterType="hashmap">
+		update cusvoice
+       set del_yn = 'Y' where no= #{chid};
+	</update>
 
 
 

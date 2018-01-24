@@ -8,7 +8,8 @@
    
    <!--뉴스 리스트 (뉴스 리스트 가져올때 사용) -->
    <select id="selectList" resultType="hashmap" parameterType="hashmap">
-      select * from board ORDER BY no DESC limit #{start}, #{viewRow};
+      select * from board where del_yn='N' ORDER BY no DESC 
+<!--       limit #{start}, #{viewRow}; -->
    </select>
    
    <!-- 게시글 개수 구하기 -->
@@ -33,7 +34,10 @@
       update board set title=#{title}, contents=#{contents} where no = #{no};
    </update>
 
-
+	   <update id="noticede" parameterType="hashmap">
+		update board
+       set del_yn = 'Y' where no= #{noid};
+	 </update>
 
    
 </mapper>

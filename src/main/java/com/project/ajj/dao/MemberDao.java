@@ -20,4 +20,17 @@ public class MemberDao implements MemberDaoInterface {
 		return session.selectList("login.memberlist");
 	}
 
+	@Override
+	public List<HashMap<String, Object>> memberupdate(HashMap<String, Object> param) {
+		System.out.println("dao~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~id :"+ param);
+		System.out.println("return~~~~~~~~~~:"+session.selectOne("login.memberinfoup",param));
+		return session.selectOne("login.memberinfoup",param);
+	}
+
+	@Override
+	public List<HashMap<String, Object>> cusmemberboard(HashMap<String, Object> param) {
+		
+		return session.selectList("sql.cusmemberboard",param);
+	}
+
 }

@@ -51,7 +51,6 @@ app.controller("cusvoiceregister", function($rootScope, $scope, $routeParams, $h
         		 
         		 $.ajax({
         			 type:"post",
-        			 
         			 url:"cusupdatewrite",
         			 data:{"title":title, "contents":contents,"no" :no}
         		 }).done(function(d){
@@ -61,9 +60,24 @@ app.controller("cusvoiceregister", function($rootScope, $scope, $routeParams, $h
         		 ev.preventDefault();
         	 });
          }
+         if(no == null){
+        	 $("#cusvoice-updatebtn").hide();
+        	 $("#cusvoice-writebtn").show();
+         }else{
+        	 $("#cusvoice-updatebtn").show();
+        	 $("#cusvoice-writebtn").hide();
+        	 loadEvent();
+         }
+         
+//         if(no != null){
+//        	 $("#cusvoice-updatebtn").hide();
+//         }else{
+//        	 $("#cusvoice-updatebtn").show();
+//         }
          
          
-         loadEvent();
+         
+         
 	}
 	$scope.cusvoiceregister();
 });

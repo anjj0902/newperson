@@ -5,11 +5,14 @@ app.controller("stake", function($rootScope, $scope, $routeParams, $http){
 	$scope.menutype=4
 	var menutype = $scope.menutype;
 	console.log("type : " , menutype);
+	$scope.menubtn3 = function(){
+		location.href="#!/menuregister/"+menutype;
+	}
 	$scope.menuregister = function(){
-		$("#registerbtn").off().on("click",function(){
-			 location.href="#!/menuregister/"+menutype;
-		});
-		
+//		$("#registerbtn").off().on("click",function(){
+//			 location.href="#!/menuregister/"+menutype;
+//		});
+//		
 		$.ajax({
 			type:"post",
 			url:"getMenu",

@@ -5,10 +5,13 @@ app.controller("salad", function($rootScope, $scope, $routeParams, $http){
 	$scope.menutype=5
 	var menutype = $scope.menutype;
 	console.log("type : " , menutype);
+	$scope.menubtn4 = function(){
+		location.href="#!/menuregister/"+menutype;
+	}
 	$scope.menuregister = function(){
-		$("#registerbtn").off().on("click",function(){
-			 location.href="#!/menuregister/"+menutype;
-		});
+//		$("#registerbtn").off().on("click",function(){
+//			 location.href="#!/menuregister/"+menutype;
+//		});
 		
 		$.ajax({
 			type:"post",

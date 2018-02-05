@@ -6,6 +6,10 @@ app.controller("cusvoicedetail", function($rootScope, $scope, $routeParams, $htt
 	$scope.no = $routeParams.param;
 	var no = $scope.no;
 //	console.log("newsNo :",newsNo);
+	$scope.cusvoicede = function(){
+		location.href="#!/cusvoiceregister/"+$scope.no;
+	}
+	
 	$scope.cusvoicedetail = function(){
 		var noticeno = $rootScope.nodeteilid;
 		console.log("app js에서 갖어온 :",noticeno);
@@ -53,9 +57,9 @@ app.controller("cusvoicedetail", function($rootScope, $scope, $routeParams, $htt
           	
           
           }
-          $(".cusvoupda").off().on("click",function(){
-          	location.href="#!/cusvoiceregister/"+$scope.no;
-          });
+//          $(".cusvoupda").off().on("click",function(){
+//          	location.href="#!/cusvoiceregister/"+$scope.no;
+//          });
           $(".button2").click(function(){
           	location.href="#!/cusvoice";
           });

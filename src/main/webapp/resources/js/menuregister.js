@@ -6,7 +6,15 @@ app.controller("menuregister", function($rootScope, $scope, $routeParams, $http)
 	console.log("param : var :" ,no);
 	$rootScope.loginCheck();
 	
+	var dropme;
+	
 	$scope.menuregister = function(){
+		
+		console.log("dropmenu:",$(".dropmenu").val());
+//		if($(".dropmenu").val()== null)
+		
+		dropme = $(".dropmenu").val();
+		console.log("drop:",dropme);
 		if(no > 1){
 			$("div[name=submenu]").hide();
 		}else if(no < 2){

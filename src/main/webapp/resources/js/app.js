@@ -119,6 +119,11 @@ app.run(function($rootScope, $http, loginService){
 				
 			}
 			
+//			if(data.data.auth == 1){
+//				$("#muregisterbtn").show();
+//			}else{
+//				$("#muregisterbtn").hide();
+//			}
 		});
 	}
 	

@@ -12,7 +12,7 @@
                             <p style="margin-top: -3%;margin-left: 5%;    color: rgb(137,203,49);"><span style="font-size: 70px;color: rgb(196,173,101);">자</span>세히보기</p>
                         <div class="tree-bar" style="width: 100%;height: 24px;">
                             <div style="width: 243px; height: 35px;background : url(resources/img/linemap_bg.png) 0 0 no-repeat; margin-top: -1%;margin-left: 3%;">
-                                <a href="main"><p style="font-size: 30px;color: white;margin-left: 25%;">home으로 이동</p></a>
+                                <a href="#!/main"><p style="font-size: 30px;color: white;margin-left: 25%;">home으로 이동</p></a>
                             </div>
                             <hr style="width:80%; margin-left: 20%;margin-top: 0%;border: outset 1px yellow">
 
@@ -31,7 +31,10 @@
                             <div class="detail-contents">
 
                                 <div class="detail-content1"></div>
-                                     <button class="cusvoupda" type="button" style="width: 6%;height: 34px;" >수정</button>
+                                     <div data-ng-click="cusvoicede()">
+                                     	<button data-ng-if="loginFlag" class="cusvoupda" type="button" style="width: 6%;height: 34px;" >수정</button>
+                                     </div>
+                                     
                                     <button class="button2" type="button"style="width: 6%;height: 34px;">취소</button>
 
                             </div>

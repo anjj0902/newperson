@@ -22,8 +22,12 @@ public class joinService implements joinServiceInterface {
 
 	@Override
 	public HashMap<String, Object> checkid(HashMap<String, Object> param) {
-		 map = new HashMap<String, Object>();
+		System.out.println("param:###################"+param); 
+		
+		map = new HashMap<String, Object>();
          map.put("checkid", jdi.checkid(param));
+         System.out.println("map:~~~~~~~~~~~~~~~~~~~~:"+map);
+         
          return map;
 	}
 

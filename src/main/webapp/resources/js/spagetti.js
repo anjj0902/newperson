@@ -5,12 +5,16 @@ app.controller("spagetti", function($rootScope, $scope, $routeParams, $http){
 	$rootScope.loginCheck();
 	$scope.menutype=1
 	var menutype = $scope.menutype;
+	$scope.menubtn = function(){
+		location.href="#!/menuregister/"+menutype;
+	}
+	
 	$scope.menuregister = function(){
 
-		$("#registerbtn").off().on("click",function(){
-//			alert="ggg";
-			 location.href="#!/menuregister/"+menutype;
-		});
+//		$("#registerbtn").off().on("click",function(){
+////			alert="ggg";
+//			 location.href="#!/menuregister/"+menutype;
+//		});
 		
 		$.ajax({
 			type:"post",

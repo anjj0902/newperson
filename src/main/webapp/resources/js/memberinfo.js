@@ -19,7 +19,7 @@ app.controller("memberinfo", function($rootScope, $scope, $routeParams, $http){
 			  var tag=
 				  '<div class="memin-middle listbigbox1">'+
 		              '<div class="memin-middle-no1">'+data[i].id+'</div>'+
-		              '<div class="memin-middle-title1">'+data[i].email+'</div>'+
+		              
 		              '<div class="memin-middle-id1">'+data[i].pw+'</div>'+
 		              '<div class="memin-middle-btn1"><button id="delbtn" class="delbtn type="button">삭제</button></div>'+
 	              '</div>';
